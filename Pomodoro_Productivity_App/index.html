@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Advanced Pomodoro App</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1 class="main-title">🍅 Pomodoro Productivity</h1>
+
+<div class="container">
+
+    <!-- Circular Timer -->
+    <div class="circle-container">
+        <svg width="220" height="220">
+            <circle cx="110" cy="110" r="100" stroke="#eee" stroke-width="10" fill="none"/>
+            <circle id="progress"
+                cx="110" cy="110" r="100"
+                stroke="#ff4d4d"
+                stroke-width="10"
+                fill="none"
+                stroke-linecap="round"
+                stroke-dasharray="628"
+                stroke-dashoffset="0"/>
+        </svg>
+        <div class="time-text" id="time">25:00</div>
+    </div>
+
+    <h2 id="mode">Work Time</h2>
+
+    <div class="controls">
+        <button id="start">Start</button>
+        <button id="pause">Pause</button>
+        <button id="reset">Reset</button>
+    </div>
+
+    <p>Sessions Completed: <span id="sessions">0</span></p>
+
+    <hr>
+
+    <!-- Tasks -->
+    <div class="task-section">
+        <h3>Tasks</h3>
+        <input type="text" id="taskInput" placeholder="Enter task">
+        <button id="addTask">Add</button>
+        <ul id="taskList"></ul>
+    </div>
+
+    <button id="themeToggle">Toggle Dark Mode</button>
+
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
